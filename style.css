@@ -27,8 +27,9 @@ main {
     height:100%;
 }
 
-.container-fluid {
+.container {
     height:100%;
+    display:flex;
     justify-content:center;
     align-items:center;
 }
@@ -36,11 +37,10 @@ main {
 .card {
     width:50vw;
     height:40vh;
-    border-radius: 10px;
-    border:1px solid;
+    display:flex;
 }
 
-.card-left {
+.card .card-left {
     height:100%;
     width:40%;
 }
@@ -48,13 +48,115 @@ main {
 .card .card-left img {
     height:100%;
     width:100%;
+    border-radius: 10px 0 0 10px;
 }
 
 .card-right {
     height:100%;
+    width:60%;
+    padding:30px;
+    background-color: #fff;
+    border-radius:0 10px 10px 0;
 }
 
+.card-right-p1 {
+    font-size:1.5em;
+    font-weight:700;
+    color: var(--Very-Dark-Grayish-Blue);
+}
 
+.card-right-p2 {
+    margin-top:10px;
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.card-right-row {
+    width:100%;
+    margin-top:20px;
+    display:flex;
+}
+
+.row-1 {
+    width:20%;
+}
+
+.row-1 .avatar {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.row-2 {
+    width:70%;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.row-2 .row-2t {
+    color:var(--Very-Dark-Grayish-Blue);
+    font-weight:700;
+}
+
+.row-2 .row-2b {
+    color:var(--Desaturated-Dark-Blue);
+}
+
+.row-3 .icon-img {
+    padding:10px;
+    text-align:center;
+    border-radius:50%;
+    background-color: var(--Light-Grayish-Blue);
+    cursor:pointer;
+}
+
+.row-3 .active-state {
+    position:absolute;
+    right:280px;
+    bottom:290px;
+    width:220px;
+    height:50px;
+    padding:10px 20px 10px 20px;
+    text-align:center;
+    border-radius:7px;
+    background-color:var(--Very-Dark-Grayish-Blue);
+    display:none;
+}
+
+.row-3 .active-state span {
+    color:#aaa;
+    font-size:14px;
+    letter-spacing: 2px;
+}
+
+.row-3 .active-state img {
+    margin-left:15px;
+}
+
+.row-3 .arrow {
+    position:absolute;
+    width:20px;
+    height:20px;
+    right:380px;
+    bottom:285px;
+    background-color:var(--Very-Dark-Grayish-Blue);
+    transform:rotate(45deg);
+    display:none;
+
+}
+
+.row-3 .icon-img:hover{
+    background-color:var(--Very-Dark-Grayish-Blue);
+}
+
+.row-3:hover .active-state {
+    display:block;
+}
+
+.row-3:hover .arrow {
+    display:block;
+}
+/* :hover efektini .icon-img ye verince .active-state ve .arrow açılmadı direkt .row-3 e verince açıldı  */
 
 .attribution { 
     font-size: 11px; 
@@ -63,3 +165,19 @@ main {
 .attribution a { 
     color: hsl(228, 45%, 44%);
 }
+
+/* .bottom-icon {
+    position:relative;
+}
+
+.bottom-icon #icon-svg {
+    position:absolute;
+    right:10px;
+    bottom:37px;
+}
+
+.bottom-icon #icon-path {
+    mix-blend-mode: multiply;
+    fill:#f00;
+
+} */
