@@ -121,6 +121,7 @@ main {
     border-radius:7px;
     background-color:var(--Very-Dark-Grayish-Blue);
     display:none;
+    z-index: 2;
 }
 
 .row-3 .active-state span {
@@ -142,6 +143,7 @@ main {
     background-color:var(--Very-Dark-Grayish-Blue);
     transform:rotate(45deg);
     display:none;
+    z-index: 2;
 
 }
 
@@ -157,6 +159,26 @@ main {
     display:block;
 }
 /* :hover efektini .icon-img ye verince .active-state ve .arrow açılmadı direkt .row-3 e verince açıldı  */
+
+.hidden {
+    position:absolute;
+    width:45px;
+    height:20px;
+    right:370px;
+    bottom:270px;
+    background-color:white;
+    cursor:pointer;
+    z-index: 1;
+}
+
+.row-3 .hidden:hover .icon-img {
+    background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.row-3 .hidden:hover .active-state {
+    display:block;
+}
+
 
 .attribution { 
     font-size: 11px; 
