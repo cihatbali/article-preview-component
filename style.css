@@ -26,10 +26,6 @@ body {
 main {
     width:100%;
     height:100%;
-}
-
-.container {
-    height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -186,9 +182,10 @@ main {
     text-align: center; 
 }
 .attribution a { 
-    color:orangered;
+    color:#009;
 }
 
+/* icon rengini değiştirebilmek için */
 /* .bottom-icon {
     position:relative;
 }
